@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.springcode.SpringCodeApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.953 s - in com.example.springcode.SpringCodeApplicationTests
