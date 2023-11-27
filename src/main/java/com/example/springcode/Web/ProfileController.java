@@ -44,7 +44,7 @@ public class ProfileController {
     private AccountService accountService;
     private TransfereRepository transfereRepository;
     private AccountRepository accountRepository;
-    @GetMapping("/")
+    @GetMapping("/home")
     public void welcome(){
 
     }
