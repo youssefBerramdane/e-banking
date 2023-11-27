@@ -39,7 +39,7 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .oauth2ResourceServer(oath->oath.jwt(Customizer.withDefaults()))
                 .authorizeHttpRequests(auth->auth.requestMatchers("/login").permitAll())
-                .authorizeHttpRequests(auth->auth.requestMatchers("/").permitAll())
+                .authorizeHttpRequests(auth->auth.requestMatchers("/home").permitAll())
                 .authorizeHttpRequests(auth->auth.requestMatchers("/registre").permitAll())
                 .authorizeHttpRequests(auth->auth.anyRequest().authenticated())
                 .build();
