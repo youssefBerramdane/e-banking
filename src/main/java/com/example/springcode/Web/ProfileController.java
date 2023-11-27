@@ -45,9 +45,11 @@ public class ProfileController {
     private TransfereRepository transfereRepository;
     private AccountRepository accountRepository;
     @GetMapping("/home")
-    public String welcome(){
-        return "welcome";
+    public void welcome(){
+
     }
+    @GetMapping("/favicon.ico")
+    public void walo(){}
     @PostMapping("/login")
     public Map<String,String> Login( String email,  String password){
         Map<String,String> map=new HashMap<>();

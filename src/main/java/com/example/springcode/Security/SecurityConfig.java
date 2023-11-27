@@ -36,10 +36,12 @@ public class SecurityConfig {
                 .csrf(csrf->csrf.disable())
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .httpBasic(Customizer.withDefaults())
+
                 .cors(Customizer.withDefaults())
                 .oauth2ResourceServer(oath->oath.jwt(Customizer.withDefaults()))
                 .authorizeHttpRequests(auth->auth.requestMatchers("/login").permitAll())
                 .authorizeHttpRequests(auth->auth.requestMatchers("/home").permitAll())
+                .authorizeHttpRequests(auth->auth.requestMatchers("/favicon.ico").permitAll())
                 .authorizeHttpRequests(auth->auth.requestMatchers("/registre").permitAll())
                 .authorizeHttpRequests(auth->auth.anyRequest().authenticated())
                 .build();
