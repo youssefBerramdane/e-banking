@@ -44,6 +44,10 @@ public class ProfileController {
     private AccountService accountService;
     private TransfereRepository transfereRepository;
     private AccountRepository accountRepository;
+    @GetMapping("/")
+    public void welcome(){
+
+    }
     @PostMapping("/login")
     public Map<String,String> Login( String email,  String password){
         Map<String,String> map=new HashMap<>();
